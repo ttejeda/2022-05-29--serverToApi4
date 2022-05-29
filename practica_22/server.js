@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const personsRoutes = require('./routes/persons');
 const main = require('./routes/main');
+const index = require('./routes/index');
 
 //Hacer una promesa para no tener una conección asíncrona.
 mongoose.Promise = global.Promise;
@@ -13,6 +14,7 @@ app.use(express.static(__dirname + '/public')); //Se define la ruta de los estil
 app.use(express.urlencoded({extended:false}));
 app.use(personsRoutes);
 app.use(main);
+app.use(index);
 
 mongoose.connect(
 `mongodb+srv://ttejeda:jOIJJnQ6gEILygAu@cluster0.uy9zi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, //Conección al cluster de MongoDB Atlas

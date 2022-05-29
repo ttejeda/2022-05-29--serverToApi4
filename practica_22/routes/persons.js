@@ -29,5 +29,12 @@ router.post('/addPerson', function(req, res){
     myPerson.save();
 });
 
+router.get('/deletePerson/:id', function(req, res, next){
+    Person.findByIdAndRemove(req.params.id, req.body, function(err, post){
+        if(err) return next(err);
+        res.redirect('/persons');
+    });
+});
+
 //Exportar el módulo.
 module.exports = router;
