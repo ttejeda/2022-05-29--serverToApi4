@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar a una persona</title>
+</head>
+<body>
+    <h1>Llena los datos correspondientes</h1>
+
+    <%# Formulario que se usará para enviar los datos %>
+    <div>
+        <form action="/addPerson" method="post">
+            <label for="nss">Nss:</label>
+            <input type="text" id="nss" name="nss"><br><br>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre"><br><br>
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad"><br><br>
+            <label for="tipoSangre">Tipo de sangre</label>
+            <select name="tipoSangre" id="tipoSangre">
+                <option value="A+" id="A+">A+</option>
+                <option value="A-" id="A-">A-</option>
+                <option value="B+" id="B+">B+</option>
+                <option value="B-" id="B-">B-</option>
+                <option value="AB+" id="AB+">AB+</option>
+                <option value="AB-" id="AB-">AB-</option>
+                <option value="O+" id="O+">O+</option>
+                <option value="O-" id="O-">O-</option>
+            </select><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

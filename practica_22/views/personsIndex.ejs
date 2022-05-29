@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/tableStyle.css" type="text/css" rel="stylesheet">
+    <title>Tabla de personas</title>
+</head>
+<body>
+    <h1>Personas registradas</h1>
+    <table>
+        <tr>
+            <th>NSS</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Tipo de Sangre</th>
+        </tr>
+        <% Object.keys(persons).forEach(function(prop){ %> <%# Se toma el json y se transforma en un array y se hace un ciclo para obtener las propiedades de cada objeto en el array %>
+            <tr>
+                <td><%- persons[prop].nss %></td>
+                <td><%- persons[prop].nombre %></td>
+                <td><%- persons[prop].edad %></td>
+                <td><%- persons[prop].tipoSangre %></td>
+            </tr>
+        <% }); %>
+    </table><br>
+    <a href="./main">Back</a> <%# El enlace para volver a la selección %>
+</body>
+</html>

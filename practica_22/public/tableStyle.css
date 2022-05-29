@@ -1,0 +1,27 @@
+/*Estilo de personIndex*/
+table {
+  margin: 15px;     
+  width: 500px; 
+  text-align: center;    
+  border-collapse: collapse;
+}
+
+th {
+  font-size: 15px;     
+  font-weight: normal;     
+  padding: 8px;     
+  background: #000000; 
+  border-bottom: 1px solid #ffffff; 
+  color: #ffffff; 
+}
+
+td {    
+  padding: 8px;     
+  background: #364c67;     
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+h1, a {
+  margin-left: 15px;
+}
