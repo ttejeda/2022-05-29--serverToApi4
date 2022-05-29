@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar <%= `${person.nombre}` %>, <%= `${person.nss}` %></title>
+</head>
+<body>
+    <h1>Actualizar <%= `${person.nombre}` %>, <%= `${person.nss}` %></h1>
+    <p>Vuelve a colocar el tipo de Sangre, por favor.</p>
+
+    <div id="divForm">
+        <form action="/updatePerson" method="post">
+            <label for="nss">NSS:</label>
+            <input type="text" name="nss" id="nss" value="<%= `${person.nss}` %>"><br><br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" value="<%= `${person.nombre}` %>"><br><br>
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" id="edad" value="<%= `${person.edad}` %>"><br><br>
+            <label for="tipoSangre">Tipo de sangre (<b><%= `${person.tipoSangre}` %></b>):</label>
+            <select name="tipoSangre" id="tipoSangre">
+                <option value="A+" id="A+">A+</option>
+                <option value="A-" id="A-">A-</option>
+                <option value="B+" id="B+">B+</option>
+                <option value="B-" id="B-">B-</option>
+                <option value="AB+" id="AB+">AB+</option>
+                <option value="AB-" id="AB-">AB-</option>
+                <option value="O+" id="O+">O+</option>
+                <option value="O-" id="O-">O-</option>
+            </select><br><br>
+            <label for="objId">ID:</label>
+            <input type="text" name="objId" id="objId" value="<%= `${person._id}` %>"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div><br><br>
+    <a href="/persons">Back</a>
+</body>
+</html>

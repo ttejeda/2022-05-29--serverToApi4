@@ -25,7 +25,7 @@
                 <td><%- persons[prop].edad %></td>
                 <td><%- persons[prop].tipoSangre %></td>
                 <td><a href="<%= `deletePerson/${persons[prop]._id}` %>">Delete</a></td>
-                <th><a href="">Update</a></th>
+                <th><a href="<%= `findById/${persons[prop]._id}` %>">Update</a></th>
             </tr>
         <% }); %>
     </table><br>
